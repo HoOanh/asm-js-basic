@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="SHORTCUT ICON" href="images/logo.ico" />
+    <title>Trang Chủ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style-index.css" />
+    <script src="js/product.js"></script>
+  </head>
+  <body>
+    <div id="model" class="model">
+      <section class="contact" id="contact">
+        <div class="container login">
+          <span onclick="remove()" class="close">&times;</span>
+          <div class="title">Đăng Nhập</div>
+          <form action="#" id="form-login">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">SĐT / Email: </span>
+                <input
+                  type="text"
+                  placeholder="Nhập sđt hoặc email"
+                  id="user-name"
+                />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <span class="form-message"></span>
+              </div>
+              <div class="input-box"></div>
+              <div class="input-box">
+                <span class="details">Mật khẩu</span>
+                <input
+                  type="password"
+                  placeholder="Mật khẩu từ 6 đến 32 ký tự"
+                  id="password_login"
+                />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <span class="form-message"></span>
+              </div>
+              <div class="input-box imgLg">
+                <img src="images/logo.png" alt="" />
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" value="Đăng Nhập" />
+            </div>
+            <button class="button user-item" style="background: #010980">
+              <span><i class="fa fa-facebook"></i></span> Đăng nhập bằng
+              Facebook
+            </button>
+            <button style="background: #970000" class="button user-item">
+              <span><i class="fa fa-google-plus"></i></span> Đăng nhập băng
+              Google
+            </button>
+            <p class="goto" onclick="showRegistration()">
+              Bạn Chưa có tài khoản!! <br />
+              Đăng ký nhé !!!!
+            </p>
+          </form>
+        </div>
+        <div class="container registration">
+          <span onclick="remove()" class="close">&times;</span>
+          <div class="title">Đăng ký</div>
+          <form action="#" id="form-registration">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Họ và tên</span>
+                <input type="text" placeholder="Nhập họ tên" id="fullname" />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <span class="form-message"></span>
+              </div>
+              <div class="input-box">
+                <span class="details">Địa chỉ email</span>
+                <input
+                  type="email"
+                  placeholder="Nhập địa chỉ email"
+                  id="email"
+                />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <span class="form-message"></span>
+              </div>
+              <div class="input-box">
+                <span class="details">Mật khẩu</span>
+                <input
+                  type="password"
+                  placeholder="Mật khẩu từ 6 đến 32 ký tự"
+                  id="password"
+                />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <span class="form-message"></span>
+              </div>
+              <div class="input-box">
+                <span class="details">Xác nhận mật khẩu</span>
+                <input
+                  type="password"
+                  placeholder="Nhập lại mật khẩu"
+                  id="password_confirmation"
+                />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <span class="form-message"></span>
+              </div>
+              <div class="input-box">
+                <span class="details">Số điện thoại</span>
+                <input
+                  type="text"
+                  placeholder="Nhập số điện thoại"
+                  id="number_phone"
+                />
+                <i class="fa fa-exclamation-circle"></i>
+                <a href="#" class="confirm">Gửi mã xác thực</a>
+                <span class="form-message"></span>
+              </div>
+              <div class="input-box">
+                <span class="details">Mã xác thực</span>
+                <input
+                  type="text"
+                  placeholder="Nhập mã xác thực"
+                  id="accuracy"
+                />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <span class="form-message"></span>
+              </div>
+            </div>
+            <div class="gender-details input-box">
+              <input type="radio" name="gender" id="dot-1" />
+              <input type="radio" name="gender" id="dot-2" />
+              <input type="radio" name="gender" id="dot-3" />
+              <span class="gender-title">Giới tính</span>
+              <div class="category">
+                <label for="dot-1">
+                  <span class="dot one"></span>
+                  <span class="gender">Nam</span>
+                </label>
+                <label for="dot-2">
+                  <span class="dot two"></span>
+                  <span class="gender">Nữ</span>
+                </label>
+                <label for="dot-3">
+                  <span class="dot three"></span>
+                  <span class="gender">Không xác định</span>
+                </label>
+              </div>
+              <span class="form-message"></span>
+            </div>
+            <div class="button">
+              <input type="submit" value="Tạo tài khoản" />
+            </div>
+            <p onclick=" showLogin()" class="goto">
+              Xong rồi!!!! <br />
+              Vào đăng nhập đi nè!!!!
+            </p>
+          </form>
+        </div>
+      </section>
+      <div class="cart_model">
+        <div class="cart_model-content">
+          <div class="cart-header">
+            <h5 class="title">Giỏ Hàng</h5>
+            <span onclick="remove()" class="close">&times;</span>
+          </div>
+          <div class="cart-model-body">
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-total">
+              <strong class="cart-total-title">Tổng Cộng:</strong>
+              <span id="cart-total-price">0VNĐ</span>
+            </div>
+          </div>
+
+          <div class="cart-modal-footer">
+            <button
+              onclick="remove()"
+              type="button"
+              class="btn btn-secondary close-footer"
+            >
+              Đóng
+            </button>
+            <button type="button" class="btn btn-primary order">
+              Thanh Toán
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <a href="#" class="logo"><img src="images/logo.png" alt="" /></a>
+      <ul class="navigation">
+        <li><a href="#about">Giới Thiệu</a></li>
+        <li><a href="#banner">Thương hiệu</a></li>
+        <li><a href="#product">Sản Phẩm</a></li>
+        <li><a href="#blog">Blog+</a></li>
+        <li><a href="#addCart">Sản phẩm mới</a></li>
+        <li>
+          <div class="user bth">
+            <i class="fa fa-user-circle"></i>
+            <div class="acout-text">
+              <div class="text-small"><span>Đăng nhập / đăng ký</span></div>
+              <div class="acout-input">
+                <span>Tài khoản </span
+                ><i
+                  style="transform: rotate(135deg); font-size: x-small"
+                  class="fa fa-location-arrow"
+                ></i>
+              </div>
+            </div>
+            <div class="user-drop-down">
+              <div class="user-bx">
+                <button onclick="showLogin()" class="user-item">
+                  Đăng nhập
+                </button>
+                <button onclick="showRegistration()" class="user-item">
+                  Đăng ký
+                </button>
+                <button class="user-item">
+                  <span><i class="fa fa-facebook"></i></span> Đăng nhập bằng
+                  Facebook
+                </button>
+                <button class="user-item">
+                  <span><i class="fa fa-google-plus"></i></span> Đăng nhập băng
+                  Google
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div onclick="showCart()" class="bag bth">
+            <i class="fa fa-shopping-bag">
+              <span class="text-small">Giỏ hàng</span>
+              <span class="jhm">0</span>
+            </i>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <section class="about" id="about">
+      <div class="content">
+        <h2>Hi! Chào mừng bạn</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          omnis facilis? Deserunt possimus eligendi iusto voluptatibus et
+          cupiditate aspernatur hic minima distinctio saepe commodi nesciunt
+          deleniti, eveniet praesentium numquam odio laudantium beatae natus
+          neque tempore velit voluptate suscipit quasi? Voluptatibus id
+          molestiae enim tempore autem neque! Veniam molestiae eius similique!
+        </p>
+        <a class="btn" href="#">Our Menu</a>
+      </div>
+    </section>
+    <section class="banner" id="banner">
+      <div class="container">
+        <div class="row">
+          <div class="slider-show">
+            <div class="slide active">
+              <img src="images/banner/slide-1.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <a href="#"><img src="images/banner/slide-2.jpg" alt="" /></a>
+            </div>
+            <div class="slide">
+              <img src="images/banner/slide-3.jpg" alt="" />
+            </div>
+            <div class="navigation">
+              <div class="bto active"></div>
+              <div class="bto"></div>
+              <div class="bto"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col25">
+            <div class="titleBx">
+              <h3>Sản Phẩm mới</h3>
+            </div>
+            <div class="imgBx">
+              <div class="border-top border"></div>
+              <div class="border-left border"></div>
+              <div class="border-right border"></div>
+              <div class="border-bottom border"></div>
+              <a href="#"><img src="images/banner/product-new.jpg" alt="" /></a>
+            </div>
+            <div class="contentBx">
+              <p>Nước hoa Pháp Akoya Secret</p>
+            </div>
+          </div>
+          <div class="col25">
+            <div class="titleBx">
+              <h3>Tin Tức</h3>
+            </div>
+            <div class="imgBx">
+              <div class="border-top border"></div>
+              <div class="border-left border"></div>
+              <div class="border-right border"></div>
+              <div class="border-bottom border"></div>
+              <a href="#"><img src="images/banner/news.jpg" alt="" /></a>
+            </div>
+            <div class="contentBx">
+              <p>Chào mừng Paris Bleu có mặt tại AB...</p>
+            </div>
+          </div>
+          <div class="col25">
+            <div class="titleBx">
+              <h3>Khuyến mãi</h3>
+            </div>
+            <div class="imgBx">
+              <div class="border-top border"></div>
+              <div class="border-left border"></div>
+              <div class="border-right border"></div>
+              <div class="border-bottom border"></div>
+              <a href="#"><img src="images/banner/sale.jpg" alt="" /></a>
+            </div>
+            <div class="contentBx">
+              <p>Chương Trình Khuyến Mãi</p>
+            </div>
+          </div>
+          <div class="col25">
+            <div class="titleBx">
+              <h3>Thương Hiệu</h3>
+            </div>
+            <div class="imgBx">
+              <div class="border-top border"></div>
+              <div class="border-left border"></div>
+              <div class="border-right border"></div>
+              <div class="border-bottom border"></div>
+              <a href="#"><img src="images/banner/trademark.jpg" alt="" /></a>
+            </div>
+            <div class="contentBx">
+              <p>BOE Việt Nam - đơn vị quản lý thương hiệu nước hoa Pháp...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product" id="product">
+      <div class="wp-container">
+        <div class="container">
+          <div class="product-item">
+            <div class="content">
+              <div class="imgBx"><img src="images/logo.png" alt="" /></div>
+              <div class="contentBx">
+                <h3>NƯỚC HOA NAM</h3>
+              </div>
+            </div>
+            <div class="see">
+              <div class="imgPd">
+                <img src="images/Estolia (2).jpg" alt="" />
+              </div>
+              <div class="contentBx">
+                <a class="btn" href="#">xem thêm</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="content">
+              <div class="imgBx"><img src="images/logo.png" alt="" /></div>
+              <div class="contentBx">
+                <h3>NƯỚC HOA NAM</h3>
+              </div>
+            </div>
+            <div class="see">
+              <div class="imgPd">
+                <img src="images/Estolia (2).jpg" alt="" />
+              </div>
+              <div class="contentBx">
+                <a class="btn" href="#">xem thêm</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="content">
+              <div class="imgBx"><img src="images/logo.png" alt="" /></div>
+              <div class="contentBx">
+                <h3>NƯỚC HOA NAM</h3>
+              </div>
+            </div>
+            <div class="see">
+              <div class="imgPd">
+                <img src="images/Estolia (2).jpg" alt="" />
+              </div>
+              <div class="contentBx">
+                <a class="btn" href="#">xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog" id="blog">
+      <h2 class="title-text"><span>B</span>log</h2>
+      <div class="row">
+        <div class="col50">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde rem
+            ex veniam nisi eaque eum ad delectus, excepturi vel quas. Tempora
+            nisi natus, optio debitis illum ducimus provident porro laborum
+            libero quos nam? Vitae porro, aut quaerat velit soluta eos. Vitae
+            aliquid totam assumenda est temporibus facilis corrupti, nihil eius
+            beatae illum perspiciatis unde quidem quibusdam quas consequuntur
+            earum ut laudantium, illo nemo fuga at? Quas cum nam nobis
+            distinctio dolor? Numquam quidem consequatur ipsa doloremque ullam
+            sit sint veritatis, esse laudantium, officia deserunt blanditiis
+            aliquid rem recusandae nemo excepturi aut architecto dolore est
+            praesentium modi animi maiores delectus eum. Nisi perferendis autem
+            numquam ab hic dolor ullam obcaecati corrupti odit? Aspernatur
+            deleniti ea cum hic cupiditate placeat ratione id omnis? Debitis
+            deserunt ea a. Veniam sit facilis consequatur iure unde! Consectetur
+            tenetur, voluptatum ad voluptates doloremque cupiditate at quo
+            corrupti nesciunt omnis delectus exercitationem, sint dolor
+            voluptatem nostrum magnam? Esse iste nostrum numquam incidunt,
+            tempora maiores quas voluptate porro aliquam qui quia minima?
+            Tempore delectus aspernatur repellat eum quibusdam animi voluptate
+            corporis non et tempora? Facere iusto fugiat consequuntur quia,
+            aliquam dolore? Porro, consequatur eligendi. Quas excepturi
+            exercitationem nihil odit nemo in non repellat neque? Necessitatibus
+            consequuntur praesentium culpa.
+          </p>
+        </div>
+        <div class="col50">
+          <div class="imgBx">
+            <img src="images/09.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="addCart">
+      <div class="container">
+        <h2 class="title-text"><span>S</span>ản phẩm mới</h2>
+        <div id="wp_product">
+          <script>
+            add_product();
+          </script>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<script src="js/vanilla-tilt.js"></script>
+<script src="js/form-validate.js"></script>
+<script src="js/main.js"></script>
